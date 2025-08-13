@@ -1,0 +1,40 @@
+
+@use 'variables';
+@use 'personal';
+@use 'skills';
+@use 'teaser';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: variables.$font-body;
+    line-height: 1.6;
+    background-color: variables.$background-color;
+    color: variables.$text-dark;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: variables.$font-heading;
+    color: variables.$primary-color;
+    margin-bottom: variables.$spacing-sm;
+}
+
+a {
+    text-decoration: none;
+}

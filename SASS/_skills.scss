@@ -1,0 +1,59 @@
+@use 'variables';
+
+
+.competencias-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: variables.$spacing-lg;
+}
+
+.competencias-tecnicas h3,
+.competencias-blandas h3 {
+    margin-bottom: variables.$spacing-sm;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: variables.$spacing-xs;
+}
+
+.skill-bar {
+    background-color: variables.$background-color;
+    height: 10px;
+    width: 60%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: variables.$secondary-color;
+}
+
+.soft-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-sm;
+}
+
+.skill-badge {
+    background-color: variables.$primary-color;
+    color: variables.$text-light;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+// Media Queries for Desktop
+@media (min-width: 768px) {
+    .competencias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

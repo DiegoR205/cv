@@ -1,0 +1,172 @@
+
+@use 'variables';
+
+
+.section-card {
+    background-color: variables.$card-bg;
+    box-shadow: variables.$card-shadow;
+    border-radius: 10px;
+    padding: variables.$spacing-lg;
+    margin-bottom: variables.$spacing-md;
+}
+
+.section-card h2 {
+    border-bottom: 2px solid variables.$secondary-color;
+    padding-bottom: 0.5rem;
+    margin-bottom: variables.$spacing-md;
+}
+
+
+.timeline {
+    position: relative;
+    padding-left: variables.$spacing-md;
+    border-left: 2px solid variables.$secondary-color;
+}
+
+.timeline-item {
+    margin-bottom: variables.$spacing-lg;
+    position: relative;
+}
+
+.timeline-point {
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: variables.$secondary-color;
+    border-radius: 50%;
+    border: 3px solid variables.$background-color;
+}
+
+.timeline-title {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.timeline-subtitle {
+    color: variables.$primary-color;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.job-description li {
+    list-style-type: '— ';
+    margin-left: 1.5rem;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: variables.$spacing-lg;
+}
+
+.project-card {
+    background-color: variables.$card-bg;
+    box-shadow: variables.$card-shadow;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform variables.$hover-transition;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-details {
+    padding: variables.$spacing-sm;
+}
+
+.project-tech {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: variables.$spacing-sm;
+}
+
+.btn-link {
+    display: inline-block;
+    color: variables.$secondary-color;
+    font-weight: 600;
+    margin-top: variables.$spacing-sm;
+    transition: color variables.$hover-transition;
+}
+
+.btn-link:hover {
+    color: variables.$primary-color;
+}
+
+
+.contact-section {
+    background-color: variables.$primary-color;
+    color: variables.$text-light;
+    padding: variables.$spacing-lg 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: variables.$text-light;
+    border-color: variables.$secondary-color;
+}
+
+.contact-details {
+    margin-bottom: variables.$spacing-md;
+}
+
+.contact-item {
+    color: variables.$text-light;
+    margin: 0.5em 0;
+    display: block;
+    transition: color variables.$hover-transition, transform variables.$hover-transition;
+}
+
+.contact-item:hover {
+    color: variables.$secondary-color;
+    transform: translateX(5px);
+}
+
+.contact-item .icon {
+    margin-right: 0.5em;
+}
+
+.btn-download-cv {
+    background-color: variables.$accent-color;
+    color: variables.$text-light;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform variables.$hover-transition, background-color variables.$hover-transition;
+}
+
+.btn-download-cv:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+
+.footer {
+    background-color: variables.$primary-color;
+    color: variables.$text-light;
+    text-align: center;
+    padding: variables.$spacing-sm;
+}
+
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1400px;
+    }
+}
