@@ -1,7 +1,6 @@
-// _personal.scss
 @use 'variables';
 
-/* Header & Navigation */
+
 .header {
     background-color: variables.$card-bg;
     box-shadow: variables.$card-shadow;
@@ -202,7 +201,7 @@
     transform: scale(1.1);
 }
 
-/* About Me Section */
+
 .about-me-section {
     margin-top: -70px;
     position: relative;
@@ -213,7 +212,7 @@
     margin-top: variables.$spacing-sm;
 }
 
-// Media Queries for Desktop
+
 @media (min-width: 768px) {
     .header-content {
         padding: 0 variables.$spacing-lg;
