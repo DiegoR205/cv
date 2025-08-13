@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         navList.classList.toggle('active');
     });
 
-    
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); 
             navList.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
+            const targetId = link.getAttribute('href'); 
+            const targetSection = document.querySelector(targetId);
+            
         });
     });
 });
