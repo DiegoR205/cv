@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.setAttribute('aria-expanded', 'false');
             const targetId = link.getAttribute('href'); 
             const targetSection = document.querySelector(targetId);
-            
+            if (targetSection) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const topPosition = targetSection.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: topPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
