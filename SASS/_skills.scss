@@ -4,7 +4,7 @@
 .competencias-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: variables.$spacing-lg;
+    gap: 2rem;
 }
 
 .competencias-tecnicas h3,
@@ -21,22 +21,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: variables.$spacing-xs;
+    margin-bottom: 0.75rem;
     color: variables.$text-dark;
     gap: variables.$spacing-sm;
+    flex-wrap: wrap;
 }
 
 .skill-item span {
-    min-width: 200px;
+    min-width: 150px;
     font-weight: 500;
+    font-size: 0.95em;
 }
 
 .skill-bar {
     background-color: variables.$border-color;
-    height: 8px;
-    width: 60%;
-    border-radius: 4px;
+    height: 6px;
+    width: 100%;
+    border-radius: 3px;
     overflow: hidden;
+    flex: 1;
+    min-width: 100px;
+}
+
+@media (min-width: 480px) {
+    .skill-item span {
+        min-width: 170px;
+    }
+}
+
+@media (min-width: 768px) {
+    .skill-item span {
+        min-width: 200px;
+    }
+
+    .skill-bar {
+        width: 60%;
+    }
+
+    .competencias-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: variables.$spacing-lg;
+    }
 }
 
 .skill-level {
@@ -53,14 +78,8 @@
 .skill-badge {
     background-color: variables.$primary-color;
     color: variables.$accent-color;
-    padding: 0.5em 1em;
+    padding: 0.4em 0.9em;
     border-radius: 20px;
     font-weight: 500;
-    font-size: 0.9em;
-}
-
-@media (min-width: 768px) {
-    .competencias-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    font-size: 0.85em;
 }

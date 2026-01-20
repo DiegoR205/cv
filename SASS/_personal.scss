@@ -4,7 +4,7 @@
 .header {
     background-color: variables.$accent-color;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    padding: 1.2rem 0;
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -16,12 +16,35 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 variables.$spacing-sm;
+    width: 100%;
 }
 
 .logo h1 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 700;
     color: variables.$primary-color;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 480px) {
+    .logo h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 1.2rem 0;
+    }
+
+    .header-content {
+        padding: 0 3rem;
+    }
+
+    .logo h1 {
+        font-size: 1.8em;
+    }
 }
 
 .main-nav {
@@ -134,13 +157,25 @@
     background-image: url('/IMAGE/banner.webp');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: variables.$primary-color;
     position: relative;
+}
+
+@media (min-width: 768px) {
+    .hero-banner {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-banner {
+        height: 500px;
+    }
 }
 
 .hero-banner .overlay {
@@ -161,40 +196,100 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 0;
     object-fit: cover;
-    border: 5px solid variables.$primary-color;
-    margin-bottom: variables.$spacing-sm;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid variables.$primary-color;
+    margin-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 480px) {
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+        border: 4px solid variables.$primary-color;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile-photo {
+        width: 160px;
+        height: 160px;
+        border: 5px solid variables.$primary-color;
+        margin-right: variables.$spacing-lg;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .hero-name {
-    font-size: 2.5em;
+    font-size: 1.6em;
     margin-bottom: 0.2em;
     font-weight: bold;
     color: variables.$primary-color;
+    line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+    .hero-name {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-name {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-name {
+        font-size: 3em;
+    }
 }
 
 .hero-title {
-    font-size: 1.2em;
+    font-size: 0.9em;
     color: variables.$primary-color;
     font-style: italic;
     text-shadow: none;
+    line-height: 1.4;
+}
+
+@media (min-width: 480px) {
+    .hero-title {
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 1.2em;
+    }
 }
 
 .social-links {
-    margin-top: variables.$spacing-sm;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .social-links a {
     color: variables.$primary-color;
-    font-size: 1.8em;
-    margin: 0 variables.$spacing-xs;
+    font-size: 1.3em;
     transition: color variables.$hover-transition, transform variables.$hover-transition;
 }
 
@@ -243,13 +338,15 @@
     }
 
     .profile-header {
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
+        justify-content: center;
+        gap: 4rem;
     }
 
-    .profile-photo {
-        margin-right: variables.$spacing-lg;
-        margin-bottom: 0;
+    .hero-text-content {
+        text-align: left;
+        flex: 1;
     }
 
     .about-me-section {
@@ -261,6 +358,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: variables.$spacing-lg;
+    }
+
+    .social-links {
+        margin-top: 1.5rem;
+        justify-content: flex-start;
+    }
+}
     }
 
     .social-links {

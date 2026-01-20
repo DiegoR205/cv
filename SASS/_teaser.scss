@@ -6,45 +6,85 @@
     background-color: variables.$card-bg;
     box-shadow: variables.$card-shadow;
     border-radius: 10px;
-    padding: variables.$spacing-lg;
-    margin-bottom: variables.$spacing-lg;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
     border: 1px solid variables.$border-color;
 }
 
 .section-card h2 {
     border-bottom: 2px solid variables.$primary-color;
-    padding-bottom: 1rem;
-    margin-bottom: variables.$spacing-lg;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
     color: variables.$primary-color;
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
+@media (min-width: 480px) {
+    .section-card {
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-card h2 {
+        font-size: 1.6em;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-card {
+        padding: variables.$spacing-lg;
+        margin-bottom: variables.$spacing-lg;
+    }
+
+    .section-card h2 {
+        padding-bottom: 1rem;
+        margin-bottom: variables.$spacing-lg;
+        font-size: 1.8em;
+    }
+}
 
 .timeline {
     position: relative;
-    padding-left: variables.$spacing-md;
+    padding-left: 1.5rem;
     border-left: 2px solid variables.$primary-color;
 }
 
 .timeline-item {
-    margin-bottom: variables.$spacing-lg;
+    margin-bottom: 2rem;
     position: relative;
 }
 
 .timeline-point {
     position: absolute;
-    left: -20px;
+    left: -16px;
     top: 5px;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     background-color: variables.$primary-color;
     border-radius: 50%;
     border: 3px solid variables.$card-bg;
 }
 
+@media (min-width: 768px) {
+    .timeline {
+        padding-left: variables.$spacing-md;
+    }
+
+    .timeline-item {
+        margin-bottom: variables.$spacing-lg;
+    }
+
+    .timeline-point {
+        width: 16px;
+        height: 16px;
+        left: -20px;
+    }
+}
+
 .timeline-title {
-    margin-bottom: 0.5em;
-    font-size: 1.2em;
+    margin-bottom: 0.4em;
+    font-size: 1.05em;
     color: variables.$primary-color;
     font-weight: 600;
 }
@@ -53,6 +93,17 @@
     color: variables.$text-light;
     font-style: normal;
     margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+@media (min-width: 768px) {
+    .timeline-title {
+        font-size: 1.2em;
+    }
+
+    .timeline-subtitle {
+        font-size: 1em;
+    }
 }
 
 .job-description li {
@@ -77,26 +128,49 @@
 .contact-section {
     background-color: variables.$primary-color;
     color: variables.$accent-color;
-    padding: variables.$spacing-lg 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    margin-top: variables.$spacing-lg;
+    margin-top: 2rem;
 }
 
 .contact-section h2 {
     color: variables.$accent-color;
     border-color: variables.$secondary-color;
-    margin-bottom: variables.$spacing-lg;
+    margin-bottom: 1.5rem;
+    font-size: 1.4em;
 }
 
 .contact-details {
-    margin-bottom: variables.$spacing-md;
+    margin-bottom: 1.5rem;
 }
 
 .contact-item {
     color: variables.$accent-color;
-    margin: 0.5em 0;
+    margin: 0.4em 0;
     display: block;
     transition: color variables.$hover-transition, transform variables.$hover-transition;
+    font-size: 0.95em;
+}
+
+@media (min-width: 768px) {
+    .contact-section {
+        padding: variables.$spacing-lg 2rem;
+        margin-top: variables.$spacing-lg;
+    }
+
+    .contact-section h2 {
+        margin-bottom: variables.$spacing-lg;
+        font-size: 1.8em;
+    }
+
+    .contact-details {
+        margin-bottom: variables.$spacing-md;
+    }
+
+    .contact-item {
+        margin: 0.5em 0;
+        font-size: 1em;
+    }
 }
 
 .contact-item:hover {
@@ -111,13 +185,22 @@
 .btn-download-cv {
     background-color: variables.$accent-color;
     color: variables.$primary-color;
-    padding: 0.8em 2em;
+    padding: 0.7em 1.5em;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
     transition: transform variables.$hover-transition, background-color variables.$hover-transition;
     display: inline-block;
-    margin-top: variables.$spacing-md;
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+}
+
+@media (min-width: 768px) {
+    .btn-download-cv {
+        padding: 0.8em 2em;
+        margin-top: variables.$spacing-md;
+        font-size: 1em;
+    }
 }
 
 .btn-download-cv:hover {
@@ -134,8 +217,22 @@
 }
 
 .availability-note {
-    margin-top: variables.$spacing-lg;
-    padding: variables.$spacing-md;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: variables.$primary-color;
+    color: variables.$accent-color;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+@media (min-width: 768px) {
+    .availability-note {
+        margin-top: variables.$spacing-lg;
+        padding: variables.$spacing-md;
+        font-size: 0.95em;
+    }
+}
     background-color: variables.$primary-color;
     color: variables.$accent-color;
     border-radius: 8px;
