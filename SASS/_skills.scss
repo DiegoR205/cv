@@ -10,6 +10,7 @@
 .competencias-tecnicas h3,
 .competencias-blandas h3 {
     margin-bottom: variables.$spacing-sm;
+    color: variables.$primary-color;
 }
 
 .skills-list {
@@ -21,19 +22,26 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: variables.$spacing-xs;
+    color: variables.$text-dark;
+    gap: variables.$spacing-sm;
+}
+
+.skill-item span {
+    min-width: 200px;
+    font-weight: 500;
 }
 
 .skill-bar {
-    background-color: variables.$background-color;
-    height: 10px;
+    background-color: variables.$border-color;
+    height: 8px;
     width: 60%;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
 }
 
 .skill-level {
     height: 100%;
-    background-color: variables.$secondary-color;
+    background-color: variables.$primary-color;
 }
 
 .soft-skills-container {
@@ -44,7 +52,7 @@
 
 .skill-badge {
     background-color: variables.$primary-color;
-    color: variables.$text-light;
+    color: variables.$accent-color;
     padding: 0.5em 1em;
     border-radius: 20px;
     font-weight: 500;

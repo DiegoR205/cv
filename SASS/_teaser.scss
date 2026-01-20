@@ -7,21 +7,23 @@
     box-shadow: variables.$card-shadow;
     border-radius: 10px;
     padding: variables.$spacing-lg;
-    margin-bottom: variables.$spacing-md;
-
+    margin-bottom: variables.$spacing-lg;
+    border: 1px solid variables.$border-color;
 }
 
 .section-card h2 {
-    border-bottom: 2px solid variables.$secondary-color;
-    padding-bottom: 0.5rem;
-    margin-bottom: variables.$spacing-md;
+    border-bottom: 2px solid variables.$primary-color;
+    padding-bottom: 1rem;
+    margin-bottom: variables.$spacing-lg;
+    color: variables.$primary-color;
+    font-size: 1.8em;
 }
 
 
 .timeline {
     position: relative;
     padding-left: variables.$spacing-md;
-    border-left: 2px solid variables.$secondary-color;
+    border-left: 2px solid variables.$primary-color;
 }
 
 .timeline-item {
@@ -35,50 +37,55 @@
     top: 5px;
     width: 16px;
     height: 16px;
-    background-color: variables.$secondary-color;
+    background-color: variables.$primary-color;
     border-radius: 50%;
-    border: 3px solid variables.$background-color;
+    border: 3px solid variables.$card-bg;
 }
 
 .timeline-title {
     margin-bottom: 0.5em;
     font-size: 1.2em;
+    color: variables.$primary-color;
+    font-weight: 600;
 }
 
 .timeline-subtitle {
-    color: variables.$primary-color;
-    font-style: italic;
+    color: variables.$text-light;
+    font-style: normal;
     margin-bottom: 0.5em;
 }
 
 .job-description li {
     list-style-type: '— ';
     margin-left: 1.5rem;
+    color: variables.$text-dark;
 }
 
 .btn-link {
     display: inline-block;
-    color: variables.$secondary-color;
+    color: variables.$primary-color;
     font-weight: 600;
     margin-top: variables.$spacing-sm;
     transition: color variables.$hover-transition;
 }
 
 .btn-link:hover {
-    color: variables.$primary-color;
+    color: variables.$text-light;
 }
 
 
 .contact-section {
     background-color: variables.$primary-color;
-    color: variables.$text-light;
-    padding: variables.$spacing-lg 0;
+    color: variables.$accent-color;
+    padding: variables.$spacing-lg 2rem;
     text-align: center;
+    margin-top: variables.$spacing-lg;
 }
 
 .contact-section h2 {
-    color: variables.$text-light;
+    color: variables.$accent-color;
     border-color: variables.$secondary-color;
+    margin-bottom: variables.$spacing-lg;
 }
 
 .contact-details {
@@ -86,14 +93,14 @@
 }
 
 .contact-item {
-    color: variables.$text-light;
+    color: variables.$accent-color;
     margin: 0.5em 0;
     display: block;
     transition: color variables.$hover-transition, transform variables.$hover-transition;
 }
 
 .contact-item:hover {
-    color: variables.$secondary-color;
+    color: #cccccc;
     transform: translateX(5px);
 }
 
@@ -103,25 +110,42 @@
 
 .btn-download-cv {
     background-color: variables.$accent-color;
-    color: variables.$text-light;
+    color: variables.$primary-color;
     padding: 0.8em 2em;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
     transition: transform variables.$hover-transition, background-color variables.$hover-transition;
+    display: inline-block;
+    margin-top: variables.$spacing-md;
 }
 
 .btn-download-cv:hover {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     transform: translateY(-3px);
 }
 
 
 .footer {
     background-color: variables.$primary-color;
-    color: variables.$text-light;
+    color: variables.$accent-color;
     text-align: center;
     padding: variables.$spacing-sm;
+}
+
+.availability-note {
+    margin-top: variables.$spacing-lg;
+    padding: variables.$spacing-md;
+    background-color: variables.$primary-color;
+    color: variables.$accent-color;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.availability-note p {
+    color: variables.$accent-color;
+    margin: 0;
 }
 
 

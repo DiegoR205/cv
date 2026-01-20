@@ -15,9 +15,10 @@ html {
 
 body {
     font-family: variables.$font-body;
-    line-height: 1.6;
+    line-height: 1.65;
     background-color: variables.$background-color;
     color: variables.$text-dark;
+    letter-spacing: 0.3px;
 }
 
 .container {
@@ -30,8 +31,63 @@ h1, h2, h3 {
     font-family: variables.$font-heading;
     color: variables.$primary-color;
     margin-bottom: variables.$spacing-sm;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: variables.$spacing-lg;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 a {
     text-decoration: none;
+    color: variables.$primary-color;
+    transition: color variables.$hover-transition;
+}
+
+a:hover {
+    color: variables.$text-light;
+}
+
+p {
+    color: variables.$text-dark;
+    margin-bottom: variables.$spacing-sm;
+}
+
+ul {
+    margin-bottom: variables.$spacing-md;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-list li {
+    margin-bottom: 1.5em;
+}
+
+.cert-list > li > strong {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.05em;
+}
+
+.cert-list li ul {
+    list-style: none;
+    margin-top: 0.5em;
+    margin-left: 1rem;
+}
+
+.cert-list li ul li {
+    margin-bottom: 0.3em;
+    color: variables.$text-light;
 }
